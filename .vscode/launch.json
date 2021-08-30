@@ -1,0 +1,36 @@
+//$QUERIES $CACHE $LOCALCACHE $LCACHE $PEERS 16 ../../MAQUINABSP/log_queries_10002.txt $USERS
+// $THAO $RS $PS $CR $PEERS_ENVIO $ITERACION $NORMAL_RATE $TTL $CTE_TRABAJO_PEERS $CTE_ATENCION 
+//$UMBRAL_VOTACION $INTER_ARR_T $CASO $ESCENARIO $CTE_TRAFFIC_ISP $CTE_TRAFFIC_P2P $ARCH
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(gdb) Iniciar",
+            "type": "cppdbg",
+            "request": "launch",
+            //"program": "Escriba el nombre del programa; por ejemplo, ${workspaceFolder}/a.out.",
+            "program": "${workspaceFolder}/./Simulador",
+            //$QUERIES $CACHE $LOCALCACHE $LCACHE $PEERS 16 ../../MAQUINABSP/log_queries_10002.txt $USERS
+            // $THAO $RS $PS $CR $PEERS_ENVIO $ITERACION $NORMAL_RATE $TTL $CTE_TRABAJO_PEERS $CTE_ATENCION 
+            //$UMBRAL_VOTACION $INTER_ARR_T $CASO $ESCENARIO $CTE_TRAFFIC_ISP $CTE_TRAFFIC_P2P $ARCH
+            "args": ["1000","0","0","0","100","16","${workspaceFolder}/../../MAQUINABSP/log_queries_10002.txt","0",
+                    "0.5","2","0","0","10","1","1137283","72","30","10",
+                    "0.5","0.001","0","1","2","2","0"],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Habilitar la impresión con sangría para gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}
